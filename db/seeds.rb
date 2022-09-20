@@ -69,19 +69,19 @@ car3 = Car.new(
   car3.save
 
 
-car4 = Car.new(
-  name: Faker::Vehicle.make_and_model,
-  description: Faker::Lorem.paragraph(sentence_count: 10),
-  location: "190 Bd Napoléon III, 06200 Nice",
-  price_per_day: 10,
-  places: 4,
-  km: 80_000,
-  air_conditioning: false,
-  user_id: user4.id,
-)
-  photo_car4 = URI.open("https://cars.usnews.com/pics/size/390x290/images/Auto/izmo/i159614825/2022_honda_accord_sedan_angularfront.jpg")
-  car4.photos.attach(io: photo_car4, filename: "car4.jpg", content_type: "image/jpg")
-  car4.save
+# car4 = Car.new(
+#   name: Faker::Vehicle.make_and_model,
+#   description: Faker::Lorem.paragraph(sentence_count: 10),
+#   location: "190 Bd Napoléon III, 06200 Nice",
+#   price_per_day: 10,
+#   places: 4,
+#   km: 80_000,
+#   air_conditioning: false,
+#   user_id: user4.id,
+# )
+#   photo_car4 = URI.open("https://cars.usnews.com/pics/size/390x290/images/Auto/izmo/i159614825/2022_honda_accord_sedan_angularfront.jpg")
+#   car4.photos.attach(io: photo_car4, filename: "car4.jpg", content_type: "image/jpg")
+#   car4.save
 
 car5 = Car.new(
 name: Faker::Vehicle.make_and_model,
@@ -91,7 +91,8 @@ price_per_day: 11.5,
 places: 4,
 km: 20_000,
 air_conditioning: true,
-user_id: user4.id, )
+user_id: user4.id,
+)
 
  photo_car5 = URI.open("https://www.fiat.fr/content/dam/cps/fiat/fr-fr/Promotions/500-hybrid/345x175.jpg")
  car5.photos.attach(io: photo_car5, filename: "car5.jpg", content_type: "image/jpg")
