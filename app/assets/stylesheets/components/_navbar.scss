@@ -7,6 +7,18 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-item a{
+  text-decoration: none;
+  padding: 5px;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.nav-item a:hover{
+  color: rgba(0, 0, 0, 0.603);
 }
