@@ -20,19 +20,27 @@
     </div>
 </div>
 
-<div class="container">
-  <div class="row">
+<div class = "index-container">
+  <div class="card-container">
     <% @cars.each do |car| %>
-    <div class="cards-index col-12 col-lg-4">
-      <%= link_to(car_path(car.id)) do %>
-        <div class="card-article mb-5">
-          <h2 class="mb-2"><%= car.name %></h2>
-         <%= cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill %>
-          <p><%= car.price_per_day %></p>
-          <p><%= car.location %></p>
+      <div class="card-trip">
+        <%= cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <div class="card-article mb-5">
+            <%= link_to(car_path(car.id)) do %>
+            <h2 class="mb-2"><%= car.name %></h2>
+            <% end %>
+            <p><%= car.location %></p>
+          </div>
+          <p> €<%= car.price_per_day %> day</p>
         </div>
-      <% end %>
       </div>
-      <% end %>
+    <% end %>
+  </div>
+
+  <div id = "map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
