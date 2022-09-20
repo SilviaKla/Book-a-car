@@ -18,7 +18,9 @@ class CarsController < ApplicationController
   end
 
   def show
+    @car = Car.find(params[:id])
     @booking = Booking.new
+    @bookings = Booking.where(user: current_user)
     # The `geocoded` scope filters only flats with coordinates
     @car_map = Car.where(id: params[:id])
     @markers = @car_map.geocoded.map do |car|
