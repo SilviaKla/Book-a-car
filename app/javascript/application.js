@@ -5,4 +5,4 @@ import "bootstrap"
 
 import { initFlatpickr } from "./plugins/flatpickr";
 
-initFlatpickr();
+window.addEventListener("turbo:load", function() {  initFlatpickr();});

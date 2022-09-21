@@ -1,0 +1,25 @@
+.booking-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(153, 153, 153, 0.155);
+  border-radius: 10px;
+  width: 60%;
+  margin: 5px;
+  padding:5px;
+  align-self: center;
+
+  img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: black solid 2px;
+  }
+
+  .booking-det{
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
