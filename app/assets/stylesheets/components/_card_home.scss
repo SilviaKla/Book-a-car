@@ -1,11 +1,10 @@
-.card-container {
+#scroll {
   margin: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.card-trip {
+.card-car {
   border-radius: 5px;
   margin: 5px;
   overflow: hidden;
@@ -13,26 +12,26 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-car > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-car h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-car p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.card-car .card-car-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -40,7 +39,7 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-car-infos .card-car-user {
   position: absolute;
   right: 16px;
   top: -20px;
@@ -56,28 +55,28 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .card-container {
+  #scroll {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .card-container {
+  #scroll {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .card-container {
+  #scroll {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .card-container {
+  #scroll {
     grid-template-columns: 1fr 1fr;
   }
 }

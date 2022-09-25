@@ -1,9 +1,2 @@
-
-<div class="popup" >
-  <%=  link_to car do%>
-    <div>
-      <h2><%=  car.location%></h2>
-      <%= cl_image_tag car.photos.first.key %>
-    </div>
-  <% end  %>
-</div>
+<h2><%= car.name %></h2>
+<p><%= car.location %></p>

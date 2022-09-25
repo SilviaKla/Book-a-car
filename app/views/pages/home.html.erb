@@ -1,0 +1,60 @@
+<div class="banner">
+    <div class="d-flex align-items-center flex-column">
+      <div class = "title-home">
+        <h1>EasyRoad</h1>
+        <p>The best solution to land a car without extra costs!</p>
+      </div>
+      <div class ="d-flex">
+        <%=  link_to cars_path, class: "link-to-show" do%>
+            <p class="button">Browse Cars in your area</p>
+          <% end %>
+          <% if user_signed_in? %>
+            <%=  link_to destroy_user_session_path, data: { turbo_method: :delete}, class: "link-to-login" do%>
+              <p class="button">Log-out</p>
+          <% end %>
+          <% else %>
+            <%=  link_to new_user_session_path, class: "link-to-login" do%>
+              <p class="button">Log-in</p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+<div class = "how-it-works">
+
+    <h2 class = "text-center">How it works</h2>
+    <div class = "container-cards">
+      <div class = "card">
+
+        <% if user_signed_in? %>
+          <%=  link_to profile_path(), class: "link-to-login" do%>
+          <%= image_tag "user.png" %>
+          <h3>Profile</h3>
+          <p>See my cars and my bookings</p>
+          <%end%>
+        <%else%>
+          <%=  link_to new_user_registration_path, class: "link-to-login" do%>
+          <%= image_tag "user.png"%>
+          <h3>Sign-up</h3>
+          <p>Create your account</p>
+          <%end%>
+        <%end%>
+      </div>
+
+      <div class = "card">
+        <%# <%= link_to new_car_path, class: "link-to-show" do  %>
+        <%= image_tag "car.png"%>
+        <h3>Add a Car</h3>
+        <p>You can show to other users your cars available to land</p>
+        <%# <% end %>
+      </div>
+      <div class = "card">
+        <%=  link_to cars_path, class: "link-to-show" do%>
+        <%= image_tag "browse.png" %>
+        <h3>Browse Cars</h3>
+        <p> search for cars available in your area </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
