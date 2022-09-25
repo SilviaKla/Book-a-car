@@ -11,6 +11,11 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  width: 50%;
+}
+
+a{
+  text-decoration: none;
 }
 
 .card-product img {
@@ -47,4 +52,8 @@
   padding: 10px;
   border: black solid 2px;
   border-radius: 20px;
+}
+
+.row {
+  width: 100%,
 }

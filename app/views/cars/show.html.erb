@@ -1,5 +1,5 @@
 <div class ="car-show">
- <h2 id="title">Book My Car</h2>
+ <h2 id="title">Book This Car</h2>
 
   <div class="container-show-top">
     <div class="row">
@@ -8,14 +8,13 @@
       </div>
 
 
-      <div class="col-sm-4">
+      <div class="col-sm-4 d-flex align-items-center flex-column">
       <h2><%= @car.name %></h2>
-      <p><%= @car.description %></p>
       <ul>
-      <li><button type="button" class="btn btn-outline-dark">€ <%= @car.price_per_day %> per day</button></li>
-      <li><button type="button" class="btn btn-outline-dark">Seats: <%= @car.places %></button></li>
-      <li><button type="button" class="btn btn-outline-dark"><%= @car.km %> Km</button></li>
-      <li><button type="button" class="btn btn-outline-dark"> air Conditioning: <%= @car.air_conditioning %></button></li>
+        <li>€ <%= @car.price_per_day %> per day</li>
+        <li>Seats: <%= @car.places %></li>
+        <li><%= @car.km %> Km</li>
+        <li> plate: <%= @car.license_plate %></li>
       </ul>
       </div>
     </div>

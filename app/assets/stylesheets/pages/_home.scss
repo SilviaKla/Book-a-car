@@ -1,0 +1,74 @@
+.title-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+  font-size: 24px;
+  color: black;
+}
+
+.how-it-works{
+  margin: auto;
+  width: 100%;
+}
+
+.container-cards {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  height: 300px;
+  .link-to-login h3{
+    text-decoration: none;
+    color: black;
+  }
+  .link-to-login p{
+    text-decoration: none;
+    color: grey;
+  }
+}
+
+img {
+  height: 110px;
+  width: 110px;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(230,230,230);
+  padding: 20px;
+}
+
+.card:hover {
+  margin: 18px;
+}
+
+
+h2 {
+  font-size: 30px;
+  margin-top: 20px
+}
+
+.card h3{
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

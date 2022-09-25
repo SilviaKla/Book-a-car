@@ -1,17 +1,17 @@
 <div class="banner">
-    <div class = "title">
-      <h1>Get your Vehicle</h1>
-      <p>The best solution to land a car without extra costs!</p>
-    </div>
+  <div class = "title">
+    <h1>EasyRoad</h1>
+    <p>The best solution to land a car without extra costs!</p>
+  </div>
     <div class="d-flex justify-content-center">
-      <div class="d-flex flex-column" id="searchBox">
+      <div class="d-flex flex-column col-6" id="searchBox">
         <h3>Find a Car in your region</h3>
         <div id = "searchbox" class="form col-xs-12">
           <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
             <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "City, Region, State"
+              placeholder: "City, Model, year"
              %>
              <%= submit_tag "Research", class: "btn btn-dark" %>
           <% end %>
@@ -20,27 +20,31 @@
     </div>
 </div>
 
-<div class = "index-container">
-  <div class="card-container">
-    <% @cars.each do |car| %>
-      <div class="card-trip">
-        <%= cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill %>
-        <div class="card-trip-infos">
-          <div class="card-article mb-5">
-            <%= link_to(car_path(car.id)) do %>
-            <h2 class="mb-2"><%= car.name %></h2>
-            <% end %>
-            <p><%= car.location %></p>
+<div class="row">
+  <div class="col-12 col-lg-8">
+    <div class="cards-index p-3" id="scroll">
+      <% @cars.each do |car| %>
+        <%= link_to(car_path(car.id)) do %>
+          <div class="card-car mb-5">
+            <%=  cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill  %>
+            <div class="card-car-infos p-3">
+              <div>
+                <h2 class="mb-2"><%= car.name %> <%= car.year %></h2>
+                <p><%=car.location %></p>
+              </div>
+              <p> <strong>€ <%=car.price_per_day %> per day </strong></p>
           </div>
-          <p> €<%= car.price_per_day %> day</p>
         </div>
-      </div>
-    <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
-  <div id = "map"
+  <div class="col-12 col-lg-4">
+    <div id = "map"
         data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
+         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>

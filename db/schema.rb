@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_20_103915) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_25_145619) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -63,10 +63,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_20_103915) do
     t.float "price_per_day"
     t.integer "places"
     t.integer "km"
-    t.boolean "air_conditioning", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "year"
+    t.string "license_plate"
+    t.string "fuel_tipe"
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 

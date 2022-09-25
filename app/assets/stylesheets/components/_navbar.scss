@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: black;
+  background-color: $light-pink;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,17 +8,22 @@
 }
 
 .logo {
-  height: 50px;
-  width: 100px;
+  height: 55px;
+  width: 75px;
+}
+
+.easyroad {
+  height: 60px;
+  width: 160px;
 }
 
 .nav-item a{
   text-decoration: none;
   padding: 5px;
   margin-left: 5px;
-  color: rgba(255, 253, 253, 0.603);
+  color:#ed542aaa;
 }
 
 .nav-item a:hover{
-  color: rgba(255, 251, 251, 0.877);
+  color: #ED532A;
 }
