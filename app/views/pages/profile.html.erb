@@ -1,27 +1,5 @@
 <h1 id="profile"><%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %> profile page</h1>
-
-<div class="container text-center">
-  <div class="row justify-content-md-center">
-    <div class="col-md-auto">
-      <h2>My Cars</h2>
-      <div class="card-container">
-          <% @cars.each do |car| %>
-            <div class="card-trip">
-              <%= cl_image_tag car.photos.first.key, height: 300, width: 400, crop: :fill %>
-              <div class="card-trip-infos">
-                <div class="card-article mb-5">
-                  <%= link_to(car_path(car.id)) do %>
-                  <h2 class="mb-2"><%= car.name %></h2>
-                  <% end %>
-                  <p><%= car.location %></p>
-                </div>
-                <p> €<%= car.price_per_day %> day</p>
-              </div>
-            </div>
-          <% end %>
-      </div>
-    </div>
-    <div class="col col-lg-6">
+    <div class="d-flex align-items-center flex-column">
       <h2>My Bookings</h2>
       <% @bookings.each do |booking|%>
         <div class="card-product">
